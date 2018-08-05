@@ -10,6 +10,7 @@ filetype plugin indent on    " required
 "
 " Settings
 "
+set relativenumber
 set noerrorbells                " No beeps
 set number                      " Show line numbers
 set backspace=indent,eol,start  " Makes backspace key more powerful.
@@ -345,6 +346,7 @@ autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
 
 " Markdown Settings
 autocmd BufNewFile,BufReadPost *.md setl ts=4 sw=4 sts=4 expandtab
+" autocmd BufEnter *.md colorscheme dracula
 
 " lua settings
 autocmd BufNewFile,BufRead *.lua setlocal noet ts=4 sw=4 sts=4
@@ -557,3 +559,11 @@ if !g:remoteSession
 endif
 
 " vim:ts=2:sw=2:et
+"
+"
+"
+" Jacob's added plugins
+syntax on
+
+" vimwiki stuff
+let g:vimwiki_list = [{"syntax": 'markdown'}]
